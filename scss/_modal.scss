@@ -1,0 +1,106 @@
+.open-modal {
+    background-color: rgb(192, 189, 189);
+    padding: toRem(10) toRem(20);
+    text-align: center;
+    border-radius: toRem(10);
+    transition: background-color 0.3s;
+
+    &:not(:last-child) {
+        margin-bottom: toRem(20);
+    }
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: rgb(153, 150, 150);
+        }
+    }
+}
+.modal {
+    max-width: toRem(800);
+    margin: 0 auto;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgb(192, 189, 189);
+    padding: toRem(20);
+    border-radius: toRem(20);
+    position: relative;
+    z-index: 5;
+    transition: all 0.3s;
+    scale: 0;
+
+    .show-modal & {
+        opacity: 1;
+        visibility: visible;
+        scale: 1;
+    }
+
+    // .modal__header
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: toRem(20);
+
+        &:not(:last-child) {
+            margin-bottom: toRem(20);
+        }
+    }
+
+    // .modal__title
+
+    &__title {
+        font-size: toRem(20);
+    }
+
+    // .modal__close-button
+
+    &__close-button {
+        background-color: rgb(170, 2, 2);
+        color: rgb(204, 204, 204);
+        padding: toRem(10);
+        text-align: center;
+        border-radius: toRem(5);
+        transition: background-color 0.3s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: rgb(116, 3, 3);
+            }
+        }
+    }
+
+    // .modal__body
+
+    &__body {
+        &:not(:last-child) {
+            margin-bottom: toRem(20);
+        }
+    }
+
+    // .modal__text
+
+    &__text {
+        &:not(:last-child) {
+            margin-bottom: toRem(20);
+        }
+        p {
+            &:not(:last-child) {
+                margin-bottom: toRem(10);
+            }
+        }
+    }
+
+    // .modal__link
+
+    &__link {
+        &:not(:last-child) {
+            margin-bottom: toRem(20);
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
