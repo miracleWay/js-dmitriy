@@ -128,7 +128,7 @@ details > summary {
   font-weight: 800;
   font-style: normal;
 }
-.open-modal {
+.open-modal, .tabs__button {
   background-color: rgb(192, 189, 189);
   padding: 0.625rem 1.25rem;
   text-align: center;
@@ -136,11 +136,11 @@ details > summary {
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
-.open-modal:not(:last-child) {
+.open-modal:not(:last-child), .tabs__button:not(:last-child) {
   margin-bottom: 1.25rem;
 }
 @media (any-hover: hover) {
-  .open-modal:hover {
+  .open-modal:hover, .tabs__button:hover {
     background-color: rgb(153, 150, 150);
   }
 }
@@ -229,6 +229,21 @@ details > summary {
   .modal__link:hover {
     text-decoration: underline;
   }
+}
+
+.tabs {
+  font-size: 1.25rem;
+}
+.tabs__button--active {
+  border: 0.0625rem solid rgb(0, 0, 0);
+}
+.tabs__content {
+  border: 0.0625rem solid rgb(0, 0, 0);
+  padding: 1.25rem;
+  display: none;
+}
+.tabs__content--active {
+  display: block;
 }
 
 .wrapper {

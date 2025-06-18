@@ -1,0 +1,35 @@
+.tabs {
+    font-size: toRem(20);
+    // .tabs__buttons
+
+    &__buttons {
+    }
+
+    // .tabs__button
+
+    &__button {
+        @extend .open-modal;
+
+        &--active {
+            border: toRem(1) solid rgba(0, 0, 0, 1);
+        }
+    }
+
+    // .tabs__body
+
+    &__body {
+    }
+
+    // .tabs__content
+
+    &__content {
+        border: toRem(1) solid rgba(0, 0, 0, 1);
+        padding: toRem(20);
+
+        display: none;
+
+        &--active {
+            display: block;
+        }
+    }
+}
